@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Collect View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DataCollectViewController" customModule="motiondatawriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXz-qj-79k">
+                                <rect key="frame" x="163.5" y="516" width="87" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="생성"/>
+                                <connections>
+                                    <action selector="startButtonClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWr-dt-ab7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-1A-nCD">
+                                <rect key="frame" x="197.5" y="344" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyZ-cP-zpJ">
+                                <rect key="frame" x="168" y="430" width="78.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bJl-kU-4WD">
+                                <rect key="frame" x="134.5" y="263" width="145" height="32"/>
+                                <segments>
+                                    <segment title="standing"/>
+                                    <segment title="running"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="D2X-41-Qyy"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="파일 개수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dM-Cd-eN8">
+                                <rect key="frame" x="20" y="351.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNb-Db-E9T">
+                                <rect key="frame" x="20" y="437.5" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EyZ-cP-zpJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0eQ-M1-keu"/>
+                            <constraint firstItem="EyZ-cP-zpJ" firstAttribute="top" secondItem="RPa-1A-nCD" secondAttribute="bottom" constant="50" id="9kA-uH-Ynz"/>
+                            <constraint firstItem="8dM-Cd-eN8" firstAttribute="centerY" secondItem="RPa-1A-nCD" secondAttribute="centerY" id="DQW-kC-3YE"/>
+                            <constraint firstItem="RPa-1A-nCD" firstAttribute="top" secondItem="bJl-kU-4WD" secondAttribute="bottom" constant="50" id="XKi-gl-xt6"/>
+                            <constraint firstItem="8dM-Cd-eN8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ziy-z8-WaQ"/>
+                            <constraint firstItem="bJl-kU-4WD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zsn-sQ-GZI"/>
+                            <constraint firstItem="VNb-Db-E9T" firstAttribute="centerY" secondItem="EyZ-cP-zpJ" secondAttribute="centerY" id="edW-Jc-0nr"/>
+                            <constraint firstItem="VNb-Db-E9T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gOU-sC-nCh"/>
+                            <constraint firstItem="RXz-qj-79k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jkj-I3-yrO"/>
+                            <constraint firstItem="RXz-qj-79k" firstAttribute="top" secondItem="EyZ-cP-zpJ" secondAttribute="bottom" constant="50" id="tAV-RW-W1S"/>
+                            <constraint firstItem="RPa-1A-nCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tSv-gx-sgg"/>
+                            <constraint firstItem="EyZ-cP-zpJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tdF-OM-9Xf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fileCountLabel" destination="RPa-1A-nCD" id="DHc-2n-On4"/>
+                        <outlet property="rowCountLabel" destination="EyZ-cP-zpJ" id="XrV-eO-6fN"/>
+                        <outlet property="segmentedControl" destination="bJl-kU-4WD" id="vvq-Kq-zHg"/>
+                        <outlet property="startButton" destination="RXz-qj-79k" id="iuM-Vx-VSw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
